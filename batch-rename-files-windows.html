@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Batch Rename Files in Windows 10 & 11 (3 Ways)</title>
+  <meta name="description" content="Rename many files at once in Windows 10 and 11: with File Explorer, with PowerShell, or with a batch rename tool that adds counters, dates, EXIF and music tags and shows a live preview.">
+  <meta name="theme-color" content="#fbfaf7">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="assets/icon-64.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="canonical" href="https://talhary.github.io/filespro/batch-rename-files-windows.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="FilesPro">
+  <meta property="og:title" content="How to batch rename files in Windows (3 ways)">
+  <meta property="og:description" content="Rename many files at once in Windows 10 and 11: with File Explorer, with PowerShell, or with a batch rename tool that adds counters, dates, EXIF and music tags and shows a live preview.">
+  <meta property="og:url" content="https://talhary.github.io/filespro/batch-rename-files-windows.html">
+  <meta property="og:image" content="https://talhary.github.io/filespro/assets/shots/rename.webp">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to batch rename files in Windows (3 ways)">
+  <meta name="twitter:description" content="Rename many files at once in Windows 10 and 11: with File Explorer, with PowerShell, or with a batch rename tool that adds counters, dates, EXIF and music tags and shows a live preview.">
+  <meta name="twitter:image" content="https://talhary.github.io/filespro/assets/shots/rename.webp">
+  <script>
+    try { if (localStorage.getItem("fp-theme") === "dark") document.documentElement.setAttribute("data-theme", "dark"); } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "TechArticle",
+        "headline": "How to batch rename files in Windows (3 ways)",
+        "description": "Rename many files at once in Windows 10 and 11: with File Explorer, with PowerShell, or with a batch rename tool that adds counters, dates, EXIF and music tags and shows a live preview.",
+        "url": "https://talhary.github.io/filespro/batch-rename-files-windows.html",
+        "mainEntityOfPage": "https://talhary.github.io/filespro/batch-rename-files-windows.html",
+        "image": "https://talhary.github.io/filespro/assets/shots/rename.webp",
+        "datePublished": "2026-10-19",
+        "dateModified": "2026-10-19",
+        "inLanguage": "en",
+        "author": {
+          "@type": "Organization",
+          "name": "talhatechs",
+          "url": "https://talhary.github.io/filespro/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "talhatechs",
+          "url": "https://talhary.github.io/filespro/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://talhary.github.io/filespro/assets/icon-512.png"
+          }
+        },
+        "about": {
+          "@type": "SoftwareApplication",
+          "name": "FilesPro Manager",
+          "operatingSystem": "Windows 10, Windows 11",
+          "applicationCategory": "UtilitiesApplication",
+          "url": "https://talhary.github.io/filespro/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "FilesPro",
+            "item": "https://talhary.github.io/filespro/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Batch rename files",
+            "item": "https://talhary.github.io/filespro/batch-rename-files-windows.html"
+          }
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to batch rename files in Windows with FilesPro",
+        "description": "Rename many files at once with a pattern, counters, dates and photo or music tags, previewing every new name first.",
+        "tool": [
+          {
+            "@type": "HowToTool",
+            "name": "FilesPro"
+          }
+        ],
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Select the files",
+            "text": "Open the folder in FilesPro and select the files you want to rename."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Open Batch rename",
+            "text": "Press Ctrl+M, or choose Batch rename from the command palette."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Type a pattern",
+            "text": "Type a pattern such as Iceland-{n:2}{ext}. Add find and replace or a case change if you need them."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Check the preview",
+            "text": "Every old and new name is listed. Names Windows doesn't allow, or that clash, are flagged."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Rename",
+            "text": "Press Rename. If you change your mind, Ctrl+Z undoes the whole batch in one step."
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="./"><img src="assets/icon-64.png" alt="" width="32" height="32">FilesPro</a>
+      <nav class="nav-links" aria-label="Site">
+        <a href="./#features">Features</a>
+        <a href="shortcuts.html">Shortcuts</a>
+        <a href="./#guides">Guides</a>
+        <a href="./#faq">FAQ</a>
+      </nav>
+      <div class="nav-end">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to dark theme"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+        <a class="btn btn-primary" href="https://apps.microsoft.com/search?query=FilesPro+Manager" data-store>Get FilesPro</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="doc">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="./">FilesPro</a><span>/</span>Batch rename files</nav>
+    <h1>How to batch rename files in Windows</h1>
+    <p class="lead">Number a folder of holiday photos, put the date in front of every scan, or replace spaces with dashes. Here are three ways to rename many files at once on Windows 10 and 11, from quickest to most flexible.</p>
+    <p class="byline">Updated 19 October 2026 · By the FilesPro team</p>
+    <div class="toc"><b>On this page</b><ol>
+      <li><a href="#file-explorer">File Explorer: same name plus a number</a></li>
+      <li><a href="#powershell">PowerShell: any rule you can script</a></li>
+      <li><a href="#filespro">FilesPro: patterns with a live preview and undo</a></li>
+      <li><a href="#tips">Tips that save you from a mess</a></li>
+    </ol></div>
+
+    <h2 id="file-explorer">1. File Explorer: same name plus a number</h2>
+    <p>Windows can rename a group of files to one name with a number in brackets. No extra software needed.</p>
+    <ol>
+      <li>Open the folder in File Explorer and select the files (<kbd>Ctrl</kbd><kbd>A</kbd> selects all).</li>
+      <li>Press <kbd>F2</kbd>.</li>
+      <li>Type the new name, for example <code>Iceland</code>, and press <kbd>Enter</kbd>.</li>
+    </ol>
+    <p>The files become <code>Iceland (1).jpg</code>, <code>Iceland (2).jpg</code>, <code>Iceland (3).jpg</code> and so on. Extensions are kept.</p>
+    <p><strong>Limits:</strong> that's the only pattern. You can't choose the number format, add dates, keep part of the old name, or replace text. For anything more, use one of the methods below.</p>
+
+    <h2 id="powershell">2. PowerShell: any rule you can script</h2>
+    <p>PowerShell comes with Windows and can rename files with any rule. Open the folder in File Explorer, type <code>powershell</code> in the address bar and press Enter, then use one of these.</p>
+    <h3>Number files with leading zeros</h3>
+    <pre><code>$i = 1
+Get-ChildItem *.jpg | Sort-Object Name | ForEach-Object {
+    Rename-Item $_ -NewName ('Iceland-{0:D2}{1}' -f $i, $_.Extension)
+    $i++
+}</code></pre>
+    <p>Result: <code>Iceland-01.jpg</code>, <code>Iceland-02.jpg</code>… Change <code>D2</code> to <code>D3</code> for three digits.</p>
+    <h3>Replace spaces with dashes</h3>
+    <pre><code>Get-ChildItem -File | Where-Object Name -like '* *' |
+    Rename-Item -NewName { $_.Name -replace ' ', '-' }</code></pre>
+    <h3>Put the date modified in front</h3>
+    <pre><code>Get-ChildItem -File | Rename-Item -NewName {
+    $_.LastWriteTime.ToString('yyyy-MM-dd') + ' ' + $_.Name
+}</code></pre>
+    <p class="note">Add <code>-WhatIf</code> to the end of <code>Rename-Item</code> to see what would happen without renaming anything. PowerShell has no undo, so try it on a copy of the folder first.</p>
+    <p><strong>Limits:</strong> you need to get the script right, there's no preview unless you use <code>-WhatIf</code>, and reading photo EXIF dates or music tags takes a lot more code.</p>
+
+    <h2 id="filespro">3. FilesPro: patterns with a live preview and undo</h2>
+    <p><a href="./">FilesPro</a> is a file manager for Windows with a built-in batch rename. You type a pattern, see every new name before anything changes, and can undo the whole batch in one step, even after a restart.</p>
+    <button class="window" type="button" data-caption="Batch rename with tokens and a live preview"><img src="assets/shots/rename.webp" width="1600" height="900" alt="The FilesPro batch rename dialog previewing 13 new file names" loading="lazy"></button>
+    <ol>
+      <li>Select the files in FilesPro.</li>
+      <li>Press <kbd>Ctrl</kbd><kbd>M</kbd> (or open the command palette with <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>P</kbd> and type <em>batch rename</em>).</li>
+      <li>Type a pattern, for example <code>Iceland-{n:2}{ext}</code>. Set <strong>Start</strong> and <strong>Step</strong> for the counter if you need them.</li>
+      <li>Optionally add <strong>Find</strong> and <strong>Replace with</strong> (tick <strong>Regular expression</strong> for patterns), and a <strong>Case</strong> change: lowercase, UPPERCASE or Title Case. The case change leaves the extension alone.</li>
+      <li>Check the preview. Names that Windows doesn't allow, names that end with a period or space, reserved names like <code>CON</code>, and names that clash with each other or with other files are flagged before you rename.</li>
+      <li>Press <strong>Rename</strong>. Changed your mind? <kbd>Ctrl</kbd><kbd>Z</kbd> undoes the whole batch.</li>
+    </ol>
+    <h3>Pattern tokens</h3>
+    <div class="table-wrap"><table><thead><tr><th>Token</th><th>Becomes</th><th>Example</th></tr></thead><tbody><tr><td><code>{name}</code></td><td>Original name, without the extension</td><td>Black sand beach</td></tr><tr><td><code>{ext}</code></td><td>Original extension, with the dot</td><td>.jpg</td></tr><tr><td><code>{n}</code></td><td>Counter (set Start and Step)</td><td>1, 2, 3</td></tr><tr><td><code>{n:3}</code></td><td>Counter padded with zeros</td><td>001, 002, 003</td></tr><tr><td><code>{date}</code></td><td>Date modified (yyyy-MM-dd)</td><td>2026-09-14</td></tr><tr><td><code>{date:yyyyMMdd}</code></td><td>Date modified, any .NET date format</td><td>20260914</td></tr><tr><td><code>{taken}</code></td><td>Photo's EXIF date taken (also takes a format)</td><td>2026-09-14</td></tr><tr><td><code>{camera}</code></td><td>Camera model from EXIF</td><td>X-T5</td></tr><tr><td><code>{width} {height}</code></td><td>Image size in pixels</td><td>1600 1000</td></tr><tr><td><code>{artist} {album} {title}</code></td><td>Music tags (ID3)</td><td>Aurora</td></tr><tr><td><code>{track} {track:2}</code></td><td>Track number, optionally padded</td><td>7, 07</td></tr><tr><td><code>{year} {genre}</code></td><td>More music tags</td><td>2026</td></tr><tr><td><code>{parent}</code></td><td>Name of the folder the file is in</td><td>Iceland trip</td></tr></tbody></table></div>
+    <h3>Examples</h3>
+    <div class="table-wrap"><table><thead><tr><th>Pattern</th><th>Before</th><th>After</th></tr></thead><tbody><tr><td><code>Iceland-{n:2}{ext}</code></td><td>Black sand beach.jpg</td><td>Iceland-01.jpg</td></tr><tr><td><code>{taken} {name}{ext}</code></td><td>IMG_4021.jpg</td><td>2026-09-14 IMG_4021.jpg</td></tr><tr><td><code>{parent} {n:3}{ext}</code></td><td>IMG_4021.jpg (in Iceland trip)</td><td>Iceland trip 001.jpg</td></tr><tr><td><code>{track:2} - {artist} - {title}{ext}</code></td><td>audio_07.mp3</td><td>07 - Aurora - Runaway.mp3</td></tr><tr><td><code>{date:yyyyMMdd}_{name}{ext}</code></td><td>Report.pdf</td><td>20261018_Report.pdf</td></tr></tbody></table></div>
+    <p>Find and replace runs after the pattern. For example, find <code>\s+</code> and replace with <code>-</code> with <strong>Regular expression</strong> ticked turns every run of spaces into a single dash.</p>
+
+    <h2 id="tips">Tips that save you from a mess</h2>
+    <ul>
+      <li><strong>Sort first.</strong> Counters follow the order files are processed in. Sort by name or date before you number them.</li>
+      <li><strong>Always keep the extension.</strong> End patterns with <code>{ext}</code> (FilesPro) or <code>$_.Extension</code> (PowerShell), or Windows won't know how to open the files.</li>
+      <li><strong>Pad numbers.</strong> <code>01</code>…<code>10</code> sorts correctly; <code>1</code>…<code>10</code> puts 10 after 1.</li>
+      <li><strong>Use the date taken for photos.</strong> The date modified changes when you edit or copy a photo; the EXIF date taken doesn't.</li>
+      <li><strong>Make sure you can go back.</strong> Test on a copy, use <code>-WhatIf</code>, or use a tool with undo.</li>
+    </ul>
+
+    <h2>Frequently asked questions</h2>
+    <h3>Can I batch rename files in Windows without software?</h3>
+    <p>Yes. Select the files in File Explorer and press F2 to give them one name with a number, or use PowerShell's <code>Rename-Item</code> for any other rule.</p>
+    <h3>How do I rename files with numbers in order?</h3>
+    <p>Sort the files the way you want, then use a counter: <code>{n:2}</code> in FilesPro gives 01, 02, 03; in PowerShell use <code>'{0:D2}' -f $i</code> and increase <code>$i</code> for each file.</p>
+    <h3>Can I rename photos by the date they were taken?</h3>
+    <p>Yes, with a tool that reads EXIF data. In FilesPro use <code>{taken}</code>, for example <code>{taken:yyyy-MM-dd} {name}{ext}</code>.</p>
+    <h3>Can I undo a batch rename?</h3>
+    <p>PowerShell can't undo. FilesPro undoes a whole batch with Ctrl+Z, many steps deep, and keeps that history across restarts.</p>
+
+    <div class="cta-box">
+      <img src="assets/icon-128.png" alt="" width="56" height="56">
+      <div><b>Rename hundreds of files in seconds</b><span>A fast, keyboard-first file manager for Windows 10 and 11. No account, no ads, no telemetry.</span></div>
+      <a class="btn btn-primary" href="https://apps.microsoft.com/search?query=FilesPro+Manager" data-store>Get it from the Microsoft Store</a>
+    </div>
+
+    <h2>Related</h2>
+    <div class="related"><a href="shortcuts.html">FilesPro keyboard shortcuts<span>Every default keyboard shortcut in FilesPro</span></a><a href="compare-two-folders-windows.html">How to compare two folders<span>Find what's missing or newer, copy only that</span></a><a href="file-explorer-alternative.html">FilesPro vs File Explorer<span>What a dual-pane file manager adds</span></a></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="brand" href="./"><img src="assets/icon-64.png" alt="" width="24" height="24">FilesPro</a>
+      <nav aria-label="Footer">
+        <a href="./">Home</a>
+        <a href="shortcuts.html">Shortcuts</a>
+        <a href="batch-rename-files-windows.html">Batch rename</a>
+        <a href="compare-two-folders-windows.html">Compare folders</a>
+        <a href="file-explorer-alternative.html">vs File Explorer</a>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="mailto:talhariaz5425869@gmail.com?subject=FilesPro">Support</a>
+      </nav>
+      <p class="fine">© <span id="year">2026</span> talhatechs. All rights reserved. FilesPro is a trademark of talhatechs. Windows is a trademark of the Microsoft group of companies.</p>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Screenshot">
+    <button class="icon-btn close" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <img alt="">
+    <p></p>
+  </dialog>
+  <script src="assets/main.js"></script>
+</body>
+</html>

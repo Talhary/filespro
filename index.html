@@ -3,19 +3,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FilesPro – Fast, keyboard-first file manager for Windows</title>
-  <meta name="description" content="Two panes, tabs, instant search and an operation queue you can pause, resume and undo. FilesPro is a fast, keyboard-first file manager for Windows with a native Rust core. No account, no ads, no telemetry.">
+  <title>FilesPro – Dual-Pane File Manager for Windows 10 &amp; 11</title>
+  <meta name="description" content="FilesPro is a fast, keyboard-first file manager for Windows: two panes, tabs, instant search, batch rename, and copies you can pause, resume, verify and undo. No account, no ads, no telemetry.">
   <meta name="theme-color" content="#fbfaf7">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="assets/icon-64.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="FilesPro – Fast, keyboard-first file manager for Windows">
+  <meta property="og:site_name" content="FilesPro">
+  <meta property="og:title" content="FilesPro – Dual-Pane File Manager for Windows">
   <meta property="og:description" content="Two panes, tabs, instant search and an operation queue you can pause, resume and undo. No account, no ads, no telemetry.">
   <meta property="og:image" content="https://talhary.github.io/filespro/assets/social-card.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="FilesPro file manager with two panes and tabs">
   <meta property="og:url" content="https://talhary.github.io/filespro/">
+  <meta property="og:locale" content="en_US">
   <link rel="canonical" href="https://talhary.github.io/filespro/">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FilesPro – Dual-Pane File Manager for Windows">
+  <meta name="twitter:description" content="Two panes, tabs, instant search and an operation queue you can pause, resume and undo.">
+  <meta name="twitter:image" content="https://talhary.github.io/filespro/assets/social-card.jpg">
+  <link rel="preload" as="image" href="assets/shots/dual-pane.webp" type="image/webp">
   <script>
     try { if (localStorage.getItem("fp-theme") === "dark") document.documentElement.setAttribute("data-theme", "dark"); } catch (e) {}
   </script>
@@ -23,12 +32,132 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "FilesPro Manager",
-    "operatingSystem": "Windows 10 version 2004 or later, Windows 11",
-    "applicationCategory": "UtilitiesApplication",
-    "description": "A fast, keyboard-first file manager for Windows: two panes, tabs, instant search and an operation queue you can pause, resume and undo.",
-    "author": { "@type": "Organization", "name": "talhatechs" }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://talhary.github.io/filespro/#org",
+        "name": "talhatechs",
+        "url": "https://talhary.github.io/filespro/",
+        "logo": "https://talhary.github.io/filespro/assets/icon-512.png",
+        "email": "talhariaz5425869@gmail.com"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://talhary.github.io/filespro/#website",
+        "name": "FilesPro",
+        "url": "https://talhary.github.io/filespro/",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://talhary.github.io/filespro/#org" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://talhary.github.io/filespro/#app",
+        "name": "FilesPro Manager",
+        "alternateName": "FilesPro",
+        "url": "https://talhary.github.io/filespro/",
+        "applicationCategory": "UtilitiesApplication",
+        "applicationSubCategory": "File manager",
+        "operatingSystem": "Windows 10 version 2004 or later, Windows 11",
+        "processorRequirements": "x64, ARM64",
+        "softwareVersion": "1.0",
+        "inLanguage": ["en", "de", "es", "fr"],
+        "description": "A fast, keyboard-first file manager for Windows: two panes, tabs, instant search and an operation queue you can pause, resume and undo, on a native Rust core.",
+        "image": "https://talhary.github.io/filespro/assets/icon-512.png",
+        "screenshot": [
+          "https://talhary.github.io/filespro/assets/shots/dual-pane.webp",
+          "https://talhary.github.io/filespro/assets/shots/search.webp",
+          "https://talhary.github.io/filespro/assets/shots/rename.webp",
+          "https://talhary.github.io/filespro/assets/shots/themes.webp"
+        ],
+        "featureList": [
+          "Dual pane with tabs",
+          "Instant search with a local filename index",
+          "Operation queue with pause and resume",
+          "Verified copies with BLAKE3 or SHA-256",
+          "Resumable copies and crash recovery",
+          "Undo and redo that survive restarts",
+          "Batch rename with a live preview",
+          "Browse zip, 7z and tar archives as folders",
+          "Integrated terminal tabs",
+          "Command palette and customizable shortcuts",
+          "18 color themes"
+        ],
+        "author": { "@id": "https://talhary.github.io/filespro/#org" },
+        "publisher": { "@id": "https://talhary.github.io/filespro/#org" }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does FilesPro replace File Explorer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. FilesPro is a separate app that runs alongside File Explorer, so nothing in Windows changes. Use FilesPro for the heavy jobs (moving, comparing, renaming) and keep using File Explorer wherever you like."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which versions of Windows does it run on?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Windows 10 version 2004 (build 19041) or later, and Windows 11, on x64 and ARM64 PCs. The integrated terminal uses Microsoft Edge WebView2, which comes with Windows 11 and recent Windows 10 updates."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I really undo a copy or delete after restarting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. FilesPro keeps a journal of every operation, so copies, moves, renames, deletes and batch renames can be undone with Ctrl+Z, many steps deep, even after you close and reopen the app. A file you replace goes to the Recycle Bin first, so undo can bring it back."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if my PC crashes in the middle of a copy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Files are written under a temporary name and renamed only when complete, so a crash never leaves a half-written file behind. When FilesPro starts again, interrupted jobs continue where they stopped and half-finished files are cleaned up."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does search need administrator rights?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Search works out of the box from a local filename index. Optionally, you can turn on instant search on all drives; that installs a small local service after an administrator prompt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I keep my Total Commander or Vim shortcuts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Start from the File Explorer, Total Commander or Vim key preset, change any shortcut in the key editor, and export your keymap to take it to another PC."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does FilesPro collect any data?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. There's no account, no ads, no analytics and no telemetry, and the app makes no network connections of its own. Settings, history and the search index stay on your PC."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which languages is it available in?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "English, German, Spanish and French. FilesPro follows your Windows language, or you can pick one in Settings."
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -45,7 +174,8 @@
         <a href="#keyboard">Keyboard</a>
         <a href="#themes">Themes</a>
         <a href="#screenshots">Screenshots</a>
-        <a href="#privacy">Privacy</a>
+        <a href="#guides">Guides</a>
+        <a href="#faq">FAQ</a>
       </nav>
       <div class="nav-end">
         <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to dark theme">
@@ -349,6 +479,87 @@
       </div>
     </section>
 
+    <!-- Guides -->
+    <section id="guides" class="alt">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Guides</span>
+          <h2>Get more done with your files.</h2>
+          <p>Step-by-step guides for everyday file jobs on Windows, with and without FilesPro.</p>
+        </div>
+        <div class="guides">
+          <a class="card reveal" href="batch-rename-files-windows.html">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h10M4 12h16M4 17h7"/><path d="m15 16 2 2 4-4"/></svg></div>
+            <h3>How to batch rename files</h3>
+            <p>Number photos, add dates, replace text and change case, in File Explorer, PowerShell and FilesPro.</p>
+            <span class="more">Read the guide →</span>
+          </a>
+          <a class="card reveal" href="compare-two-folders-windows.html">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7" height="16" rx="1.5"/><rect x="14" y="4" width="7" height="16" rx="1.5"/><path d="M10 12h4"/></svg></div>
+            <h3>How to compare two folders</h3>
+            <p>Find what's missing, newer or different between two folders, then copy only the differences.</p>
+            <span class="more">Read the guide →</span>
+          </a>
+          <a class="card reveal" href="file-explorer-alternative.html">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M12 10v6"/></svg></div>
+            <h3>FilesPro vs File Explorer</h3>
+            <p>What a dual-pane file manager adds to Windows, and when File Explorer is all you need.</p>
+            <span class="more">See the comparison →</span>
+          </a>
+          <a class="card reveal" href="shortcuts.html">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/></svg></div>
+            <h3>Keyboard shortcuts</h3>
+            <p>Every default FilesPro shortcut on one page: files, tabs, panes, views and search.</p>
+            <span class="more">See all shortcuts →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2>Questions, answered.</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Does FilesPro replace File Explorer?</summary>
+            <p>No. FilesPro is a separate app that runs alongside File Explorer, so nothing in Windows changes. Use FilesPro for the heavy jobs (moving, comparing, renaming) and keep using File Explorer wherever you like.</p>
+          </details>
+          <details>
+            <summary>Which versions of Windows does it run on?</summary>
+            <p>Windows 10 version 2004 (build 19041) or later, and Windows 11, on x64 and ARM64 PCs. The integrated terminal uses Microsoft Edge WebView2, which comes with Windows 11 and recent Windows 10 updates.</p>
+          </details>
+          <details>
+            <summary>Can I really undo a copy or delete after restarting?</summary>
+            <p>Yes. FilesPro keeps a journal of every operation, so copies, moves, renames, deletes and batch renames can be undone with Ctrl+Z, many steps deep, even after you close and reopen the app. A file you replace goes to the Recycle Bin first, so undo can bring it back.</p>
+          </details>
+          <details>
+            <summary>What happens if my PC crashes in the middle of a copy?</summary>
+            <p>Files are written under a temporary name and renamed only when complete, so a crash never leaves a half-written file behind. When FilesPro starts again, interrupted jobs continue where they stopped and half-finished files are cleaned up.</p>
+          </details>
+          <details>
+            <summary>Does search need administrator rights?</summary>
+            <p>No. Search works out of the box from a local filename index. Optionally, you can turn on instant search on all drives; that installs a small local service after an administrator prompt.</p>
+          </details>
+          <details>
+            <summary>Can I keep my Total Commander or Vim shortcuts?</summary>
+            <p>Yes. Start from the File Explorer, Total Commander or Vim key preset, change any shortcut in the key editor, and export your keymap to take it to another PC.</p>
+          </details>
+          <details>
+            <summary>Does FilesPro collect any data?</summary>
+            <p>No. There's no account, no ads, no analytics and no telemetry, and the app makes no network connections of its own. Settings, history and the search index stay on your PC.</p>
+          </details>
+          <details>
+            <summary>Which languages is it available in?</summary>
+            <p>English, German, Spanish and French. FilesPro follows your Windows language, or you can pick one in Settings.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- Privacy -->
     <section id="privacy" style="padding-top:0">
       <div class="wrap">
@@ -394,6 +605,10 @@
       <a class="brand" href="#top"><img src="assets/icon-64.png" alt="" width="24" height="24">FilesPro</a>
       <nav aria-label="Footer">
         <a href="#features">Features</a>
+        <a href="shortcuts.html">Shortcuts</a>
+        <a href="batch-rename-files-windows.html">Batch rename</a>
+        <a href="compare-two-folders-windows.html">Compare folders</a>
+        <a href="file-explorer-alternative.html">vs File Explorer</a>
         <a href="privacy.html">Privacy policy</a>
         <a href="mailto:talhariaz5425869@gmail.com?subject=FilesPro">Support</a>
         <a href="https://apps.microsoft.com/search?query=FilesPro+Manager" data-store>Microsoft Store</a>

@@ -24,3 +24,17 @@ The "Get FilesPro" buttons point at a Store search for now. Replace every
 ```
 python -m http.server 8000
 ```
+
+## Pages
+
+| Page | Targets |
+| --- | --- |
+| `index.html` | FilesPro, dual-pane file manager for Windows |
+| `shortcuts.html` | FilesPro keyboard shortcuts |
+| `batch-rename-files-windows.html` | how to batch rename files in Windows |
+| `compare-two-folders-windows.html` | how to compare two folders in Windows |
+| `file-explorer-alternative.html` | File Explorer alternative |
+| `privacy.html` | privacy policy (Partner Center) |
+
+When you add or change a page, update `sitemap.xml` (and its `lastmod`) and link the page from the
+home page's Guides section and the footers.
