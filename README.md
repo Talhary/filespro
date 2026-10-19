@@ -13,11 +13,10 @@ Live at https://talhary.github.io/filespro/
 Every push to `main` deploys through `.github/workflows/pages.yml` (Settings > Pages > Source is
 "GitHub Actions"). The workflow can also be run by hand from the Actions tab.
 
-## After the Store listing is live
+## Store link
 
-The "Get FilesPro" buttons point at a Store search for now. Replace every
-`https://apps.microsoft.com/search?query=FilesPro+Manager` (all marked `data-store`) with
-`https://apps.microsoft.com/detail/<Store ID>`.
+The "Get FilesPro" buttons (all marked `data-store`) point at
+`https://apps.microsoft.com/detail/9NTKTTNK7JXX?hl=en-us&gl=US&ocid=pdpshare`.
 
 ## Preview locally
 
