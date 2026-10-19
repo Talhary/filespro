@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FilesPro – Dual-Pane File Manager for Windows 10 &amp; 11</title>
   <meta name="description" content="FilesPro is a fast, keyboard-first file manager for Windows: two panes, tabs, instant search, batch rename, and copies you can pause, resume, verify and undo. No account, no ads, no telemetry.">
+  <meta name="google-site-verification" content="0eyW0zeu_gIlbdkaZUCSYkcfh9fMwwXT3r_XzbgK_aY">
   <meta name="theme-color" content="#fbfaf7">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="assets/icon-64.png">
@@ -24,7 +25,7 @@
   <meta name="twitter:title" content="FilesPro – Dual-Pane File Manager for Windows">
   <meta name="twitter:description" content="Two panes, tabs, instant search and an operation queue you can pause, resume and undo.">
   <meta name="twitter:image" content="https://talhary.github.io/filespro/assets/social-card.jpg">
-  <link rel="preload" as="image" href="assets/shots/dual-pane.webp" type="image/webp">
+  <link rel="preload" as="image" type="image/webp" imagesrcset="assets/shots/dual-pane-480.webp 480w, assets/shots/dual-pane-800.webp 800w, assets/shots/dual-pane-1200.webp 1200w, assets/shots/dual-pane.webp 1600w" imagesizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1128px) calc(100vw - 48px), 1080px">
   <script>
     try { if (localStorage.getItem("fp-theme") === "dark") document.documentElement.setAttribute("data-theme", "dark"); } catch (e) {}
   </script>
@@ -167,7 +168,7 @@
   <header class="site-header">
     <div class="wrap nav">
       <a class="brand" href="#top" aria-label="FilesPro home">
-        <img src="assets/icon-64.png" alt="" width="32" height="32">FilesPro
+        <img src="assets/icon-64.webp" alt="" width="32" height="32">FilesPro
       </a>
       <nav class="nav-links" aria-label="Sections">
         <a href="#features">Features</a>
@@ -191,7 +192,7 @@
     <!-- Hero -->
     <div class="hero" id="top">
       <div class="wrap">
-        <img class="hero-icon" src="assets/icon-256.png" alt="" width="96" height="96">
+        <img class="hero-icon" src="assets/icon-192.webp" alt="" width="96" height="96">
         <div class="eyebrow">New · FilesPro 1.0 for Windows</div>
         <h1>Move thousands of files. <span class="grad">Undo any of them.</span></h1>
         <p class="lede">FilesPro is a fast, keyboard-first file manager for Windows. Two panes, tabs, instant search and an operation queue you can pause, resume and undo, all on a native Rust core.</p>
@@ -206,7 +207,7 @@
 
         <div class="hero-shot">
           <button class="window" type="button" data-caption="Two panes with tabs: copy or move to the other side with one key">
-            <img src="assets/shots/dual-pane.webp" width="1600" height="900" alt="FilesPro with two panes side by side, each with its own tabs, and a sidebar of favorites and places" fetchpriority="high">
+            <img src="assets/shots/dual-pane.webp" srcset="assets/shots/dual-pane-480.webp 480w, assets/shots/dual-pane-800.webp 800w, assets/shots/dual-pane-1200.webp 1200w, assets/shots/dual-pane.webp 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1128px) calc(100vw - 48px), 1080px" width="1600" height="900" alt="FilesPro with two panes side by side, each with its own tabs, and a sidebar of favorites and places" fetchpriority="high">
           </button>
         </div>
       </div>
@@ -244,10 +245,10 @@
           </div>
           <div class="stack">
             <button class="window back" type="button" data-caption="Compare two folders and copy only the differences">
-              <img src="assets/shots/compare.webp" width="1600" height="900" alt="Two panes compared, with new and changed files marked" loading="lazy">
+              <img src="assets/shots/compare.webp" srcset="assets/shots/compare-480.webp 480w, assets/shots/compare-800.webp 800w, assets/shots/compare-1200.webp 1200w, assets/shots/compare.webp 1600w" sizes="(max-width: 980px) 80vw, 510px" width="1600" height="900" alt="Two panes compared, with new and changed files marked" loading="lazy">
             </button>
             <button class="window front" type="button" data-caption="Thumbnails grouped by type, with headers you can collapse">
-              <img src="assets/shots/thumbnails.webp" width="1600" height="900" alt="Thumbnail view grouped by file type" loading="lazy">
+              <img src="assets/shots/thumbnails.webp" srcset="assets/shots/thumbnails-480.webp 480w, assets/shots/thumbnails-800.webp 800w, assets/shots/thumbnails-1200.webp 1200w, assets/shots/thumbnails.webp 1600w" sizes="(max-width: 980px) 68vw, 440px" width="1600" height="900" alt="Thumbnail view grouped by file type" loading="lazy">
             </button>
           </div>
         </article>
@@ -264,7 +265,7 @@
             </ul>
           </div>
           <button class="window" type="button" data-caption="Instant search as you type, in a folder or across whole drives">
-            <img src="assets/shots/search.webp" width="1600" height="900" alt="Search results for 'aurora' listed instantly in the left pane" loading="lazy">
+            <img src="assets/shots/search.webp" srcset="assets/shots/search-480.webp 480w, assets/shots/search-800.webp 800w, assets/shots/search-1200.webp 1200w, assets/shots/search.webp 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 980px) calc(100vw - 48px), 620px" width="1600" height="900" alt="Search results for 'aurora' listed instantly in the left pane" loading="lazy">
           </button>
         </article>
 
@@ -282,7 +283,7 @@
             <div class="undo-card"><kbd>Ctrl</kbd><kbd>Z</kbd><span>Made a mistake? Undo copies, moves, renames, deletes and batch renames, many steps deep, even after a restart.</span></div>
           </div>
           <button class="window" type="button" data-caption="The operation queue: pause, resume, or run several jobs at once">
-            <img src="assets/shots/queue.webp" width="1600" height="900" alt="A 4 GB copy running in the operation queue with pause and cancel buttons" loading="lazy">
+            <img src="assets/shots/queue.webp" srcset="assets/shots/queue-480.webp 480w, assets/shots/queue-800.webp 800w, assets/shots/queue-1200.webp 1200w, assets/shots/queue.webp 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 980px) calc(100vw - 48px), 620px" width="1600" height="900" alt="A 4 GB copy running in the operation queue with pause and cancel buttons" loading="lazy">
           </button>
         </article>
 
@@ -298,7 +299,7 @@
             </ul>
           </div>
           <button class="window" type="button" data-caption="Preview pane for pictures, PDFs and text, with file details">
-            <img src="assets/shots/preview.webp" width="1600" height="900" alt="The preview pane showing a photo with its type, size, dimensions and checksums" loading="lazy">
+            <img src="assets/shots/preview.webp" srcset="assets/shots/preview-480.webp 480w, assets/shots/preview-800.webp 800w, assets/shots/preview-1200.webp 1200w, assets/shots/preview.webp 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 980px) calc(100vw - 48px), 620px" width="1600" height="900" alt="The preview pane showing a photo with its type, size, dimensions and checksums" loading="lazy">
           </button>
         </article>
 
@@ -316,10 +317,10 @@
           </div>
           <div class="stack">
             <button class="window back" type="button" data-caption="A terminal tab right next to your files, with git status badges">
-              <img src="assets/shots/terminal.webp" width="1600" height="900" alt="An integrated PowerShell terminal tab beside a file pane" loading="lazy">
+              <img src="assets/shots/terminal.webp" srcset="assets/shots/terminal-480.webp 480w, assets/shots/terminal-800.webp 800w, assets/shots/terminal-1200.webp 1200w, assets/shots/terminal.webp 1600w" sizes="(max-width: 980px) 80vw, 510px" width="1600" height="900" alt="An integrated PowerShell terminal tab beside a file pane" loading="lazy">
             </button>
             <button class="window front" type="button" data-caption="Batch rename with tokens and a live preview">
-              <img src="assets/shots/rename.webp" width="1600" height="900" alt="The batch rename dialog previewing 13 new file names" loading="lazy">
+              <img src="assets/shots/rename.webp" srcset="assets/shots/rename-480.webp 480w, assets/shots/rename-800.webp 800w, assets/shots/rename-1200.webp 1200w, assets/shots/rename.webp 1600w" sizes="(max-width: 980px) 68vw, 440px" width="1600" height="900" alt="The batch rename dialog previewing 13 new file names" loading="lazy">
             </button>
           </div>
         </article>
@@ -392,10 +393,10 @@
         </div>
         <div class="stack reveal">
           <button class="window back" type="button" data-caption="18 color themes, applied instantly">
-            <img src="assets/shots/themes.webp" width="1600" height="900" alt="The theme picker in Settings showing 18 color themes" loading="lazy">
+            <img src="assets/shots/themes.webp" srcset="assets/shots/themes-480.webp 480w, assets/shots/themes-800.webp 800w, assets/shots/themes-1200.webp 1200w, assets/shots/themes.webp 1600w" sizes="(max-width: 980px) 80vw, 510px" width="1600" height="900" alt="The theme picker in Settings showing 18 color themes" loading="lazy">
           </button>
           <button class="window front" type="button" data-caption="The Sakura theme">
-            <img src="assets/shots/sakura.webp" width="1600" height="900" alt="FilesPro in the light pink Sakura theme" loading="lazy">
+            <img src="assets/shots/sakura.webp" srcset="assets/shots/sakura-480.webp 480w, assets/shots/sakura-800.webp 800w, assets/shots/sakura-1200.webp 1200w, assets/shots/sakura.webp 1600w" sizes="(max-width: 980px) 68vw, 440px" width="1600" height="900" alt="FilesPro in the light pink Sakura theme" loading="lazy">
           </button>
         </div>
       </div>
@@ -452,27 +453,27 @@
         </div>
         <div class="gallery">
           <figure class="reveal">
-            <button class="window" type="button" data-caption="Quick actions and details when you rest the pointer on a file"><img src="assets/shots/hover.webp" width="1600" height="900" alt="A hover card with quick actions and file details" loading="lazy"></button>
+            <button class="window" type="button" data-caption="Quick actions and details when you rest the pointer on a file"><img src="assets/shots/hover.webp" srcset="assets/shots/hover-480.webp 480w, assets/shots/hover-800.webp 800w, assets/shots/hover-1200.webp 1200w, assets/shots/hover.webp 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 980px) 46vw, 360px" width="1600" height="900" alt="A hover card with quick actions and file details" loading="lazy"></button>
             <figcaption>Quick actions on hover</figcaption>
           </figure>
           <figure class="reveal">
-            <button class="window" type="button" data-caption="Browse zip and 7z archives like folders"><img src="assets/shots/archive.webp" width="1600" height="900" alt="The contents of a zip archive listed like a folder" loading="lazy"></button>
+            <button class="window" type="button" data-caption="Browse zip and 7z archives like folders"><img src="assets/shots/archive.webp" srcset="assets/shots/archive-480.webp 480w, assets/shots/archive-800.webp 800w, assets/shots/archive-1200.webp 1200w, assets/shots/archive.webp 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 980px) 46vw, 360px" width="1600" height="900" alt="The contents of a zip archive listed like a folder" loading="lazy"></button>
             <figcaption>Archives as folders</figcaption>
           </figure>
           <figure class="reveal">
-            <button class="window" type="button" data-caption="The command palette: every action a keystroke away"><img src="assets/shots/palette.webp" width="1600" height="900" alt="The command palette filtered to View commands with their shortcuts" loading="lazy"></button>
+            <button class="window" type="button" data-caption="The command palette: every action a keystroke away"><img src="assets/shots/palette.webp" srcset="assets/shots/palette-480.webp 480w, assets/shots/palette-800.webp 800w, assets/shots/palette-1200.webp 1200w, assets/shots/palette.webp 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 980px) 46vw, 360px" width="1600" height="900" alt="The command palette filtered to View commands with their shortcuts" loading="lazy"></button>
             <figcaption>Command palette</figcaption>
           </figure>
           <figure class="reveal">
-            <button class="window" type="button" data-caption="Group by type, with headers you can collapse"><img src="assets/shots/grouped.webp" width="1600" height="900" alt="A photos folder grouped into file folders and JPG files, beside a details pane" loading="lazy"></button>
+            <button class="window" type="button" data-caption="Group by type, with headers you can collapse"><img src="assets/shots/grouped.webp" srcset="assets/shots/grouped-480.webp 480w, assets/shots/grouped-800.webp 800w, assets/shots/grouped-1200.webp 1200w, assets/shots/grouped.webp 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 980px) 46vw, 360px" width="1600" height="900" alt="A photos folder grouped into file folders and JPG files, beside a details pane" loading="lazy"></button>
             <figcaption>Group by type</figcaption>
           </figure>
           <figure class="reveal">
-            <button class="window" type="button" data-caption="Compare two folders and copy only the differences"><img src="assets/shots/compare.webp" width="1600" height="900" alt="Two panes compared with differences marked" loading="lazy"></button>
+            <button class="window" type="button" data-caption="Compare two folders and copy only the differences"><img src="assets/shots/compare.webp" srcset="assets/shots/compare-480.webp 480w, assets/shots/compare-800.webp 800w, assets/shots/compare-1200.webp 1200w, assets/shots/compare.webp 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 980px) 46vw, 360px" width="1600" height="900" alt="Two panes compared with differences marked" loading="lazy"></button>
             <figcaption>Compare panes</figcaption>
           </figure>
           <figure class="reveal">
-            <button class="window" type="button" data-caption="A terminal tab right next to your files, with git status badges"><img src="assets/shots/terminal.webp" width="1600" height="900" alt="An integrated terminal tab" loading="lazy"></button>
+            <button class="window" type="button" data-caption="A terminal tab right next to your files, with git status badges"><img src="assets/shots/terminal.webp" srcset="assets/shots/terminal-480.webp 480w, assets/shots/terminal-800.webp 800w, assets/shots/terminal-1200.webp 1200w, assets/shots/terminal.webp 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 980px) 46vw, 360px" width="1600" height="900" alt="An integrated terminal tab" loading="lazy"></button>
             <figcaption>Integrated terminal</figcaption>
           </figure>
         </div>
@@ -582,7 +583,7 @@
     <!-- Final CTA -->
     <section class="final alt">
       <div class="wrap reveal">
-        <img src="assets/icon-256.png" alt="" width="88" height="88">
+        <img src="assets/icon-192.webp" alt="" width="88" height="88">
         <h2>Try FilesPro today.</h2>
         <p>Get it from the Microsoft Store. It installs in seconds and updates itself.</p>
         <div class="cta-row">
@@ -602,7 +603,7 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <a class="brand" href="#top"><img src="assets/icon-64.png" alt="" width="24" height="24">FilesPro</a>
+      <a class="brand" href="#top"><img src="assets/icon-64.webp" alt="" width="24" height="24">FilesPro</a>
       <nav aria-label="Footer">
         <a href="#features">Features</a>
         <a href="shortcuts.html">Shortcuts</a>

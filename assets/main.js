@@ -45,7 +45,7 @@
     document.querySelectorAll("button.window").forEach(function (btn) {
       btn.addEventListener("click", function () {
         var shot = btn.querySelector("img");
-        img.src = shot.currentSrc || shot.src;
+        img.src = shot.src; // full size, not the srcset pick
         img.alt = shot.alt;
         cap.textContent = btn.getAttribute("data-caption") || shot.alt;
         box.showModal();
