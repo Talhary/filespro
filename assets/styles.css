@@ -232,6 +232,8 @@ section { padding: 104px 0; }
 .stat { padding: 18px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
 .stat b { display: block; font: 700 32px/1 var(--font-display); letter-spacing: -.02em; }
 .stat span { font-size: 14px; color: var(--muted); }
+/* Four stats: as many per row as fit. */
+.stats.four { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
 
 /* Feature grid */
 .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }

@@ -4,7 +4,7 @@ Static marketing site for FilesPro, served by GitHub Pages. No build step.
 
 - `index.html` – home page
 - `privacy.html` – privacy policy (use this URL in Partner Center once the site is live)
-- `assets/` – styles, script, icons, screenshots (`shots/*.webp`, exported from the app repo's `store/images/screenshots`)
+- `assets/` – styles, script, icons, screenshots (`shots/*.webp` at 480/800/1200/1600 wide, exported from the app repo's `store/images/screenshots-1.1`: light theme, Watercolor backdrop)
 
 Live at https://talhary.github.io/filespro/
 

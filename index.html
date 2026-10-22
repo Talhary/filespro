@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FilesPro – Dual-Pane File Manager for Windows 10 &amp; 11</title>
-  <meta name="description" content="FilesPro is a fast, keyboard-first file manager for Windows: two panes, tabs, instant search, batch rename, and copies you can pause, resume, verify and undo. No account, no ads, no telemetry.">
+  <meta name="description" content="FilesPro is a fast, keyboard-first file manager for Windows: two panes, tabs, instant search, a viewer and terminals beside your files, batch rename, folder sync, and copies you can pause, resume, verify and undo. No account, no ads, no telemetry.">
   <meta name="google-site-verification" content="0eyW0zeu_gIlbdkaZUCSYkcfh9fMwwXT3r_XzbgK_aY">
   <meta name="theme-color" content="#fbfaf7">
   <link rel="icon" href="favicon.ico" sizes="any">
@@ -59,14 +59,15 @@
         "applicationCategory": "UtilitiesApplication",
         "applicationSubCategory": "File manager",
         "operatingSystem": "Windows 10 version 2004 or later, Windows 11",
-        "processorRequirements": "x64, ARM64",
-        "softwareVersion": "1.0",
+        "processorRequirements": "x64",
+        "softwareVersion": "1.1",
         "inLanguage": ["en", "de", "es", "fr"],
-        "description": "A fast, keyboard-first file manager for Windows: two panes, tabs, instant search and an operation queue you can pause, resume and undo, on a native Rust core.",
+        "description": "A fast, keyboard-first file manager for Windows: two panes, tabs, instant search, a viewer and terminals beside your files, and an operation queue you can pause, resume and undo, built in Rust.",
         "image": "https://talhary.github.io/filespro/assets/icon-512.png",
         "screenshot": [
           "https://talhary.github.io/filespro/assets/shots/dual-pane.webp",
           "https://talhary.github.io/filespro/assets/shots/search.webp",
+          "https://talhary.github.io/filespro/assets/shots/viewer.webp",
           "https://talhary.github.io/filespro/assets/shots/rename.webp",
           "https://talhary.github.io/filespro/assets/shots/themes.webp"
         ],
@@ -79,9 +80,13 @@
           "Undo and redo that survive restarts",
           "Batch rename with a live preview",
           "Browse zip, 7z and tar archives as folders",
-          "Integrated terminal tabs",
+          "Viewer tab for code, PDF, Word, Markdown, images, audio and video",
+          "Integrated terminals in tiles",
+          "Tags, duplicate finder, disk usage treemap and folder sync",
+          "SFTP, network shares and WSL",
+          "Music player",
           "Command palette and customizable shortcuts",
-          "18 color themes"
+          "28 color themes and 29 backdrops"
         ],
         "author": { "@id": "https://talhary.github.io/filespro/#org" },
         "publisher": { "@id": "https://talhary.github.io/filespro/#org" }
@@ -107,7 +112,7 @@
         "name": "Which versions of Windows does it run on?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Windows 10 version 2004 (build 19041) or later, and Windows 11, on x64 and ARM64 PCs. The integrated terminal uses Microsoft Edge WebView2, which comes with Windows 11 and recent Windows 10 updates."
+          "text": "Windows 10 version 2004 (build 19041) or later, and Windows 11, on x64 PCs. Nothing else needs installing."
         }
       },
       {
@@ -147,7 +152,7 @@
         "name": "Does FilesPro collect any data?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. There's no account, no ads, no analytics and no telemetry, and the app makes no network connections of its own. Settings, history and the search index stay on your PC."
+          "text": "No. There's no account, no ads, no analytics and no telemetry. FilesPro only connects where you ask it to, such as an SFTP server or a network share you open. Settings, history and the search index stay on your PC."
         }
       },
       {
@@ -171,6 +176,7 @@
         <img src="assets/icon-64.webp" alt="" width="32" height="32">FilesPro
       </a>
       <nav class="nav-links" aria-label="Sections">
+        <a href="#new">What's new</a>
         <a href="#features">Features</a>
         <a href="#keyboard">Keyboard</a>
         <a href="#themes">Themes</a>
@@ -193,21 +199,21 @@
     <div class="hero" id="top">
       <div class="wrap">
         <img class="hero-icon" src="assets/icon-192.webp" alt="" width="96" height="96">
-        <div class="eyebrow">New · FilesPro 1.0 for Windows</div>
+        <div class="eyebrow">New · FilesPro 1.1 for Windows</div>
         <h1>Move thousands of files. <span class="grad">Undo any of them.</span></h1>
-        <p class="lede">FilesPro is a fast, keyboard-first file manager for Windows. Two panes, tabs, instant search and an operation queue you can pause, resume and undo, all on a native Rust core.</p>
+        <p class="lede">FilesPro is a fast, keyboard-first file manager for Windows. Two panes, tabs, instant search, a viewer and terminals right beside your files, and an operation queue you can pause, resume and undo.</p>
         <div class="cta-row">
           <a class="btn btn-primary btn-store" href="https://apps.microsoft.com/detail/9NTKTTNK7JXX?hl=en-us&amp;gl=US&amp;ocid=pdpshare" data-store>
             <svg class="ms-logo" viewBox="0 0 23 23" aria-hidden="true"><path fill="#f35325" d="M1 1h10v10H1z"/><path fill="#81bc06" d="M12 1h10v10H12z"/><path fill="#05a6f0" d="M1 12h10v10H1z"/><path fill="#ffba08" d="M12 12h10v10H12z"/></svg>
             <span><small>Get it from the</small>Microsoft Store</span>
           </a>
-          <a class="btn btn-ghost" href="#features">See what it does</a>
+          <a class="btn btn-ghost" href="#new">See what's new</a>
         </div>
-        <p class="meta"><span>Windows 10 &amp; 11</span><span>x64 and ARM64</span><span>No account, no ads, no telemetry</span></p>
+        <p class="meta"><span>Windows 10 &amp; 11</span><span>x64</span><span>No account, no ads, no telemetry</span></p>
 
         <div class="hero-shot">
           <button class="window" type="button" data-caption="Two panes with tabs: copy or move to the other side with one key">
-            <img src="assets/shots/dual-pane.webp" srcset="assets/shots/dual-pane-480.webp 480w, assets/shots/dual-pane-800.webp 800w, assets/shots/dual-pane-1200.webp 1200w, assets/shots/dual-pane.webp 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1128px) calc(100vw - 48px), 1080px" width="1600" height="900" alt="FilesPro with two panes side by side, each with its own tabs, and a sidebar of favorites and places" fetchpriority="high">
+            <img src="assets/shots/dual-pane.webp" srcset="assets/shots/dual-pane-480.webp 480w, assets/shots/dual-pane-800.webp 800w, assets/shots/dual-pane-1200.webp 1200w, assets/shots/dual-pane.webp 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1128px) calc(100vw - 48px), 1080px" width="1600" height="900" alt="FilesPro in the light theme with the Watercolor backdrop: two panes side by side, each with its own tabs, and a sidebar of favorites and places" fetchpriority="high">
           </button>
         </div>
       </div>
@@ -221,6 +227,86 @@
         </ul>
       </div>
     </div>
+
+
+    <!-- What's new in 1.1 -->
+    <section id="new" class="alt">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">New in FilesPro 1.1</span>
+          <h2>The biggest update yet.</h2>
+          <p>A rebuilt interface that stays smooth in big folders, a viewer and terminals right next to your files, and tools for the jobs File Explorer leaves to other apps.</p>
+        </div>
+        <div class="stats four reveal" style="margin:0 auto 40px">
+          <div class="stat"><b>20+</b><span>new features</span></div>
+          <div class="stat"><b>34</b><span>new commands, 142 in all</span></div>
+          <div class="stat"><b>+10</b><span>color themes, 28 in all</span></div>
+          <div class="stat"><b>29</b><span>backdrops, all new</span></div>
+        </div>
+        <div class="grid">
+          <div class="card reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></div>
+            <h3>Viewer tab</h3>
+            <p>Code with find and replace, PDFs with searchable text, Word, Markdown, CSV, SVG, HEIC, a hex view, audio and video.</p>
+          </div>
+          <div class="card reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M12 4v16M7 9l2 2-2 2"/></svg></div>
+            <h3>Terminals in tiles</h3>
+            <p>Split the terminal right or down, zoom one, and keep several in a dock under your files.</p>
+          </div>
+          <div class="card reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+            <h3>Music player</h3>
+            <p>Play a folder in a card in the corner: shuffle, repeat, volume, a track list. It shrinks to a round button.</p>
+          </div>
+          <div class="card reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8"/><path d="M12 3a15 15 0 0 1 0 18"/></svg></div>
+            <h3>29 backdrops</h3>
+            <p>Illustrations and photos behind the panes, with their strength and the panes' see-through level in Settings.</p>
+          </div>
+          <div class="card reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></div>
+            <h3>Tags</h3>
+            <p>Give files colored labels and find them again.</p>
+          </div>
+          <div class="card reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M4 16V5a2 2 0 0 1 2-2h11"/></svg></div>
+            <h3>Find duplicates</h3>
+            <p>Compare files by content, then keep the newest or oldest copy and recycle the rest.</p>
+          </div>
+          <div class="card reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 12h9M12 3v18M12 16h9"/></svg></div>
+            <h3>Disk usage</h3>
+            <p>A treemap of what fills a folder. Click a block to drill in.</p>
+          </div>
+          <div class="card reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M3 21v-5h5M21 3v5h-5"/></svg></div>
+            <h3>Folder sync</h3>
+            <p>Mirror, two-way or update-only. See every copy and delete before it runs, and undo it after.</p>
+          </div>
+          <div class="card reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M6 10h4M6 14h8"/><circle cx="17" cy="12" r="1"/></svg></div>
+            <h3>SFTP, network and WSL</h3>
+            <p>Connect to SFTP servers, browse network shares and your WSL distributions from the sidebar.</p>
+          </div>
+          <div class="card reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12h6"/></svg></div>
+            <h3>Hash check</h3>
+            <p>MD5, SHA-1, CRC32, SHA-256 and BLAKE3, checked against a pasted hash or a .sha256 file.</p>
+          </div>
+          <div class="card reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M10 11v6M14 11v6"/><path d="M5 7l1 13a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2l1-13M9 7V4h6v3"/></svg></div>
+            <h3>Recycle Bin page</h3>
+            <p>Restore or permanently delete items without leaving FilesPro.</p>
+          </div>
+          <div class="card reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
+            <h3>Bookmarks and your own tools</h3>
+            <p>Bookmark folders, add custom commands with {path} and {name}, and open folders in Zed or VS Code.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Features -->
     <section id="features">
@@ -237,7 +323,7 @@
             <h3>Two panes. Tabs everywhere. One key to copy across.</h3>
             <p>Open folders side by side, press <kbd>F5</kbd> to copy to the other pane, and keep working while the queue does the rest.</p>
             <ul class="ticks">
-              <li>Pin, color, reorder and split tabs, or tear one off into its own window</li>
+              <li>Pin, color, resize and reorder tabs, or move one to the other pane</li>
               <li>Compare panes to see what's new, newer or different, then copy the differences either way</li>
               <li>Workspaces save your tabs and layout; your last session reopens when you start</li>
               <li>Jump to frequent folders with <kbd>Ctrl</kbd> <kbd>J</kbd></li>
@@ -247,8 +333,8 @@
             <button class="window back" type="button" data-caption="Compare two folders and copy only the differences">
               <img src="assets/shots/compare.webp" srcset="assets/shots/compare-480.webp 480w, assets/shots/compare-800.webp 800w, assets/shots/compare-1200.webp 1200w, assets/shots/compare.webp 1600w" sizes="(max-width: 980px) 80vw, 510px" width="1600" height="900" alt="Two panes compared, with new and changed files marked" loading="lazy">
             </button>
-            <button class="window front" type="button" data-caption="Thumbnails grouped by type, with headers you can collapse">
-              <img src="assets/shots/thumbnails.webp" srcset="assets/shots/thumbnails-480.webp 480w, assets/shots/thumbnails-800.webp 800w, assets/shots/thumbnails-1200.webp 1200w, assets/shots/thumbnails.webp 1600w" sizes="(max-width: 980px) 68vw, 440px" width="1600" height="900" alt="Thumbnail view grouped by file type" loading="lazy">
+            <button class="window front" type="button" data-caption="Big thumbnails for photos and videos">
+              <img src="assets/shots/thumbnails.webp" srcset="assets/shots/thumbnails-480.webp 480w, assets/shots/thumbnails-800.webp 800w, assets/shots/thumbnails-1200.webp 1200w, assets/shots/thumbnails.webp 1600w" sizes="(max-width: 980px) 68vw, 440px" width="1600" height="900" alt="Thumbnails of a folder of photos" loading="lazy">
             </button>
           </div>
         </article>
@@ -279,11 +365,12 @@
               <li>Files are written under a temporary name and renamed only when complete, so a crash never leaves a half-written file</li>
               <li>A file you replace goes to the Recycle Bin first, so undo can bring it back</li>
               <li>Long paths, timestamps, attributes and alternate streams kept intact</li>
+              <li>New: sync two folders (mirror, two-way or update-only), checked before anything runs</li>
             </ul>
             <div class="undo-card"><kbd>Ctrl</kbd><kbd>Z</kbd><span>Made a mistake? Undo copies, moves, renames, deletes and batch renames, many steps deep, even after a restart.</span></div>
           </div>
-          <button class="window" type="button" data-caption="The operation queue: pause, resume, or run several jobs at once">
-            <img src="assets/shots/queue.webp" srcset="assets/shots/queue-480.webp 480w, assets/shots/queue-800.webp 800w, assets/shots/queue-1200.webp 1200w, assets/shots/queue.webp 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 980px) calc(100vw - 48px), 620px" width="1600" height="900" alt="A 4 GB copy running in the operation queue with pause and cancel buttons" loading="lazy">
+          <button class="window" type="button" data-caption="Sync two folders: every copy, overwrite and delete listed before it runs">
+            <img src="assets/shots/sync.webp" srcset="assets/shots/sync-480.webp 480w, assets/shots/sync-800.webp 800w, assets/shots/sync-1200.webp 1200w, assets/shots/sync.webp 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 980px) calc(100vw - 48px), 620px" width="1600" height="900" alt="The Synchronize folders dialog listing what will be copied, overwritten and deleted" loading="lazy">
           </button>
         </article>
 
@@ -293,7 +380,7 @@
             <h3>Press Space. See it instantly.</h3>
             <p>Quick Look shows images, video, audio, PDF pages, Markdown, text and Office documents without opening another app. The preview pane adds photo and music details, version info and checksums.</p>
             <ul class="ticks">
-              <li>Five views: details, compact, list, icons and thumbnails, remembered per folder</li>
+              <li>Six views: details, compact, list, tiles, icons and thumbnails, remembered per folder, plus a flat view of everything under a folder</li>
               <li>Group by type, date or size, with groups you can collapse</li>
               <li>Folder sizes, Git status badges with the current branch, and cloud file state without downloading</li>
             </ul>
@@ -303,6 +390,28 @@
           </button>
         </article>
 
+
+        <article class="feature flip reveal">
+          <div class="feature-text">
+            <span class="eyebrow">New · Open files right here</span>
+            <h3>A viewer tab, a terminal dock and music, without leaving your files.</h3>
+            <p>Ctrl+double-click a file to open it in a tab: edit code with find and replace, read PDFs with selectable, searchable text, and play audio and video. Terminals sit in a dock under the panes and split into tiles.</p>
+            <ul class="ticks">
+              <li>Text and code, PDF, Word, Markdown, CSV tables, SVG, HEIC and AVIF, and a hex view</li>
+              <li>Split the terminal right or down, zoom one tile, keep several open</li>
+              <li>Play a folder of music in a player that tucks into the corner as a round button</li>
+            </ul>
+          </div>
+          <div class="stack">
+            <button class="window back" type="button" data-caption="Music while you work: a folder's tracks in a player in the corner">
+              <img src="assets/shots/music.webp" srcset="assets/shots/music-480.webp 480w, assets/shots/music-800.webp 800w, assets/shots/music-1200.webp 1200w, assets/shots/music.webp 1600w" sizes="(max-width: 980px) 80vw, 510px" width="1600" height="850" alt="The music player card in the corner with play controls and a track list" loading="lazy">
+            </button>
+            <button class="window front" type="button" data-caption="Open code, PDFs, documents and pictures in a viewer tab, right next to your files">
+              <img src="assets/shots/viewer.webp" srcset="assets/shots/viewer-480.webp 480w, assets/shots/viewer-800.webp 800w, assets/shots/viewer-1200.webp 1200w, assets/shots/viewer.webp 1600w" sizes="(max-width: 980px) 68vw, 440px" width="1600" height="900" alt="A TypeScript file open in the viewer tab beside a file pane" loading="lazy">
+            </button>
+          </div>
+        </article>
+
         <article class="feature reveal">
           <div class="feature-text">
             <span class="eyebrow">Power tools, built in</span>
@@ -310,14 +419,14 @@
             <p>Tokens for dates, counters, photo EXIF and music ID3 tags, regular expressions and case changes. See every new name before anything changes.</p>
             <ul class="ticks">
               <li>Browse zip, 7z and tar archives like folders; create zip and 7z with AES-256 encryption</li>
-              <li>Terminal tabs with PowerShell or Command Prompt that follow the folder you're in</li>
-              <li>Open any folder in Windows Terminal, PowerShell, WSL or VS Code</li>
+              <li>Terminals with PowerShell or Command Prompt that follow the folder you're in, split into tiles</li>
+              <li>Open any folder in Windows Terminal, PowerShell, WSL, VS Code or Zed, or add your own tools</li>
               <li>The full Windows context menu is always one <kbd>Shift</kbd> + right-click away</li>
             </ul>
           </div>
           <div class="stack">
-            <button class="window back" type="button" data-caption="A terminal tab right next to your files, with git status badges">
-              <img src="assets/shots/terminal.webp" srcset="assets/shots/terminal-480.webp 480w, assets/shots/terminal-800.webp 800w, assets/shots/terminal-1200.webp 1200w, assets/shots/terminal.webp 1600w" sizes="(max-width: 980px) 80vw, 510px" width="1600" height="900" alt="An integrated PowerShell terminal tab beside a file pane" loading="lazy">
+            <button class="window back" type="button" data-caption="Terminals that follow your folder, split into tiles, with git status badges">
+              <img src="assets/shots/terminal.webp" srcset="assets/shots/terminal-480.webp 480w, assets/shots/terminal-800.webp 800w, assets/shots/terminal-1200.webp 1200w, assets/shots/terminal.webp 1600w" sizes="(max-width: 980px) 80vw, 510px" width="1600" height="900" alt="Two PowerShell terminal tiles side by side beside a file pane" loading="lazy">
             </button>
             <button class="window front" type="button" data-caption="Batch rename with tokens and a live preview">
               <img src="assets/shots/rename.webp" srcset="assets/shots/rename-480.webp 480w, assets/shots/rename-800.webp 800w, assets/shots/rename-1200.webp 1200w, assets/shots/rename.webp 1600w" sizes="(max-width: 980px) 68vw, 440px" width="1600" height="900" alt="The batch rename dialog previewing 13 new file names" loading="lazy">
@@ -363,8 +472,8 @@
       <div class="wrap feature flip">
         <div class="feature-text reveal">
           <span class="eyebrow">Make it yours</span>
-          <h3 style="font-size:clamp(30px,3.8vw,46px)">18 themes, applied instantly.</h3>
-          <p>From Light and Dark to Nord, Dracula, Solarized and Catppuccin. Pick icon styles for files, folders and the app itself, and switch to a compact layout for snapped windows.</p>
+          <h3 style="font-size:clamp(30px,3.8vw,46px)">28 themes and 29 backdrops, applied instantly.</h3>
+          <p>From Light and Dark to Nord, Tokyo Night, Rosé Pine and Catppuccin. Put an illustration or photo behind your files, choose how strongly it shows, pick icon styles, and switch to a compact layout for snapped windows.</p>
           <div class="swatches" aria-label="Some of the color themes">
             <span class="swatch"><i style="background:linear-gradient(135deg,#fff 55%,#0067c0 55%)"></i>Light</span>
             <span class="swatch"><i style="background:linear-gradient(135deg,#202020 55%,#4cc2ff 55%)"></i>Dark</span>
@@ -384,19 +493,30 @@
             <span class="swatch"><i style="background:linear-gradient(135deg,#fffafc 55%,#d6457a 55%)"></i>Sakura</span>
             <span class="swatch"><i style="background:linear-gradient(135deg,#f7fafd 55%,#2b7bd6 55%)"></i>Arctic</span>
             <span class="swatch"><i style="background:linear-gradient(135deg,#f8f1e3 55%,#9a6b2f 55%)"></i>Paper</span>
+            <span class="swatch"><i style="background:linear-gradient(135deg,#16161e 55%,#7aa2f7 55%)"></i>Tokyo Night</span>
+            <span class="swatch"><i style="background:linear-gradient(135deg,#1e1f1c 55%,#a6e22e 55%)"></i>Monokai</span>
+            <span class="swatch"><i style="background:linear-gradient(135deg,#191724 55%,#c4a7e7 55%)"></i>Rosé Pine</span>
+            <span class="swatch"><i style="background:linear-gradient(135deg,#232a2e 55%,#a7c080 55%)"></i>Everforest</span>
+            <span class="swatch"><i style="background:linear-gradient(135deg,#1a1033 55%,#ff4fd8 55%)"></i>Synthwave</span>
+            <span class="swatch"><i style="background:linear-gradient(135deg,#140c0e 55%,#e5484d 55%)"></i>Crimson</span>
+            <span class="swatch"><i style="background:linear-gradient(135deg,#ebdbb2 55%,#af3a03 55%)"></i>Gruvbox Light</span>
+            <span class="swatch"><i style="background:linear-gradient(135deg,#f2e9e1 55%,#907aa9 55%)"></i>Rosé Pine Dawn</span>
+            <span class="swatch"><i style="background:linear-gradient(135deg,#e6f2ec 55%,#1f9d6b 55%)"></i>Mint</span>
+            <span class="swatch"><i style="background:linear-gradient(135deg,#efeaf8 55%,#7048e8 55%)"></i>Lavender</span>
           </div>
-          <div class="stats">
-            <div class="stat"><b>18</b><span>color themes</span></div>
+          <div class="stats four">
+            <div class="stat"><b>28</b><span>color themes</span></div>
+            <div class="stat"><b>29</b><span>backdrops</span></div>
             <div class="stat"><b>11</b><span>icon styles</span></div>
             <div class="stat"><b>4</b><span>languages: EN, DE, ES, FR</span></div>
           </div>
         </div>
         <div class="stack reveal">
-          <button class="window back" type="button" data-caption="18 color themes, applied instantly">
-            <img src="assets/shots/themes.webp" srcset="assets/shots/themes-480.webp 480w, assets/shots/themes-800.webp 800w, assets/shots/themes-1200.webp 1200w, assets/shots/themes.webp 1600w" sizes="(max-width: 980px) 80vw, 510px" width="1600" height="900" alt="The theme picker in Settings showing 18 color themes" loading="lazy">
+          <button class="window back" type="button" data-caption="28 color themes and 29 backdrops, applied instantly">
+            <img src="assets/shots/themes.webp" srcset="assets/shots/themes-480.webp 480w, assets/shots/themes-800.webp 800w, assets/shots/themes-1200.webp 1200w, assets/shots/themes.webp 1600w" sizes="(max-width: 980px) 80vw, 510px" width="1600" height="900" alt="Settings > Appearance with the backdrop picker, strength and pane opacity" loading="lazy">
           </button>
-          <button class="window front" type="button" data-caption="The Sakura theme">
-            <img src="assets/shots/sakura.webp" srcset="assets/shots/sakura-480.webp 480w, assets/shots/sakura-800.webp 800w, assets/shots/sakura-1200.webp 1200w, assets/shots/sakura.webp 1600w" sizes="(max-width: 980px) 68vw, 440px" width="1600" height="900" alt="FilesPro in the light pink Sakura theme" loading="lazy">
+          <button class="window front" type="button" data-caption="The light theme with the Watercolor backdrop">
+            <img src="assets/shots/dual-pane.webp" srcset="assets/shots/dual-pane-480.webp 480w, assets/shots/dual-pane-800.webp 800w, assets/shots/dual-pane-1200.webp 1200w, assets/shots/dual-pane.webp 1600w" sizes="(max-width: 980px) 68vw, 440px" width="1600" height="900" alt="FilesPro in the light theme with the Watercolor backdrop" loading="lazy">
           </button>
         </div>
       </div>
@@ -453,28 +573,28 @@
         </div>
         <div class="gallery">
           <figure class="reveal">
-            <button class="window" type="button" data-caption="Quick actions and details when you rest the pointer on a file"><img src="assets/shots/hover.webp" srcset="assets/shots/hover-480.webp 480w, assets/shots/hover-800.webp 800w, assets/shots/hover-1200.webp 1200w, assets/shots/hover.webp 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 980px) 46vw, 360px" width="1600" height="900" alt="A hover card with quick actions and file details" loading="lazy"></button>
-            <figcaption>Quick actions on hover</figcaption>
+            <button class="window" type="button" data-caption="Quick Look with Space: see any file in a moment"><img src="assets/shots/quicklook.webp" srcset="assets/shots/quicklook-480.webp 480w, assets/shots/quicklook-800.webp 800w, assets/shots/quicklook-1200.webp 1200w, assets/shots/quicklook.webp 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 980px) 46vw, 360px" width="1600" height="900" alt="Quick Look showing a landscape picture over the file list" loading="lazy"></button>
+            <figcaption>Quick Look</figcaption>
           </figure>
           <figure class="reveal">
-            <button class="window" type="button" data-caption="Browse zip and 7z archives like folders"><img src="assets/shots/archive.webp" srcset="assets/shots/archive-480.webp 480w, assets/shots/archive-800.webp 800w, assets/shots/archive-1200.webp 1200w, assets/shots/archive.webp 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 980px) 46vw, 360px" width="1600" height="900" alt="The contents of a zip archive listed like a folder" loading="lazy"></button>
-            <figcaption>Archives as folders</figcaption>
+            <button class="window" type="button" data-caption="See what fills a folder with the disk usage treemap"><img src="assets/shots/usage.webp" srcset="assets/shots/usage-480.webp 480w, assets/shots/usage-800.webp 800w, assets/shots/usage-1200.webp 1200w, assets/shots/usage.webp 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 980px) 46vw, 360px" width="1600" height="900" alt="A disk usage treemap of a photos folder" loading="lazy"></button>
+            <figcaption>Disk usage</figcaption>
           </figure>
           <figure class="reveal">
-            <button class="window" type="button" data-caption="The command palette: every action a keystroke away"><img src="assets/shots/palette.webp" srcset="assets/shots/palette-480.webp 480w, assets/shots/palette-800.webp 800w, assets/shots/palette-1200.webp 1200w, assets/shots/palette.webp 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 980px) 46vw, 360px" width="1600" height="900" alt="The command palette filtered to View commands with their shortcuts" loading="lazy"></button>
+            <button class="window" type="button" data-caption="The command palette: every action a keystroke away"><img src="assets/shots/palette.webp" srcset="assets/shots/palette-480.webp 480w, assets/shots/palette-800.webp 800w, assets/shots/palette-1200.webp 1200w, assets/shots/palette.webp 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 980px) 46vw, 360px" width="1600" height="900" alt="The command palette filtered to sync commands" loading="lazy"></button>
             <figcaption>Command palette</figcaption>
           </figure>
           <figure class="reveal">
-            <button class="window" type="button" data-caption="Group by type, with headers you can collapse"><img src="assets/shots/grouped.webp" srcset="assets/shots/grouped-480.webp 480w, assets/shots/grouped-800.webp 800w, assets/shots/grouped-1200.webp 1200w, assets/shots/grouped.webp 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 980px) 46vw, 360px" width="1600" height="900" alt="A photos folder grouped into file folders and JPG files, beside a details pane" loading="lazy"></button>
-            <figcaption>Group by type</figcaption>
+            <button class="window" type="button" data-caption="Find duplicate files by content and keep the copy you want"><img src="assets/shots/dupes.webp" srcset="assets/shots/dupes-480.webp 480w, assets/shots/dupes-800.webp 800w, assets/shots/dupes-1200.webp 1200w, assets/shots/dupes.webp 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 980px) 46vw, 360px" width="1600" height="900" alt="The duplicate finder listing two identical photos" loading="lazy"></button>
+            <figcaption>Find duplicates</figcaption>
           </figure>
           <figure class="reveal">
             <button class="window" type="button" data-caption="Compare two folders and copy only the differences"><img src="assets/shots/compare.webp" srcset="assets/shots/compare-480.webp 480w, assets/shots/compare-800.webp 800w, assets/shots/compare-1200.webp 1200w, assets/shots/compare.webp 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 980px) 46vw, 360px" width="1600" height="900" alt="Two panes compared with differences marked" loading="lazy"></button>
             <figcaption>Compare panes</figcaption>
           </figure>
           <figure class="reveal">
-            <button class="window" type="button" data-caption="A terminal tab right next to your files, with git status badges"><img src="assets/shots/terminal.webp" srcset="assets/shots/terminal-480.webp 480w, assets/shots/terminal-800.webp 800w, assets/shots/terminal-1200.webp 1200w, assets/shots/terminal.webp 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 980px) 46vw, 360px" width="1600" height="900" alt="An integrated terminal tab" loading="lazy"></button>
-            <figcaption>Integrated terminal</figcaption>
+            <button class="window" type="button" data-caption="Batch rename with tokens and a live preview of every new name"><img src="assets/shots/rename.webp" srcset="assets/shots/rename-480.webp 480w, assets/shots/rename-800.webp 800w, assets/shots/rename-1200.webp 1200w, assets/shots/rename.webp 1600w" sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 980px) 46vw, 360px" width="1600" height="900" alt="The batch rename dialog previewing 13 new file names" loading="lazy"></button>
+            <figcaption>Batch rename</figcaption>
           </figure>
         </div>
       </div>
@@ -531,7 +651,7 @@
           </details>
           <details>
             <summary>Which versions of Windows does it run on?</summary>
-            <p>Windows 10 version 2004 (build 19041) or later, and Windows 11, on x64 and ARM64 PCs. The integrated terminal uses Microsoft Edge WebView2, which comes with Windows 11 and recent Windows 10 updates.</p>
+            <p>Windows 10 version 2004 (build 19041) or later, and Windows 11, on x64 PCs. Nothing else needs installing.</p>
           </details>
           <details>
             <summary>Can I really undo a copy or delete after restarting?</summary>
@@ -551,7 +671,7 @@
           </details>
           <details>
             <summary>Does FilesPro collect any data?</summary>
-            <p>No. There's no account, no ads, no analytics and no telemetry, and the app makes no network connections of its own. Settings, history and the search index stay on your PC.</p>
+            <p>No. There's no account, no ads, no analytics and no telemetry. FilesPro only connects where you ask it to, such as an SFTP server or a network share you open. Settings, history and the search index stay on your PC.</p>
           </details>
           <details>
             <summary>Which languages is it available in?</summary>
@@ -568,7 +688,7 @@
           <div style="position:relative;z-index:1">
             <span class="eyebrow">Private by design</span>
             <h2 style="margin-top:12px">Your files are your business.</h2>
-            <p>FilesPro doesn't collect or send any data, and makes no network connections of its own. Settings, history and the search index stay on your PC, and the index holds file names only.</p>
+            <p>FilesPro doesn't collect or send any data, and only connects where you ask it to (an SFTP server or a network share you open). Settings, history and the search index stay on your PC, and the index holds file names only.</p>
             <p>If FilesPro ever closes unexpectedly, it offers a crash report that you can read, edit and choose to send yourself. <a href="privacy.html">Read the privacy policy</a>.</p>
           </div>
           <ul class="no-list">
@@ -594,7 +714,7 @@
         </div>
         <dl class="req">
           <div><dt>Windows</dt><dd>Windows 10 version 2004 or later, or Windows 11</dd></div>
-          <div><dt>Devices</dt><dd>x64 and ARM64</dd></div>
+          <div><dt>Devices</dt><dd>x64</dd></div>
           <div><dt>Languages</dt><dd>English, Deutsch, Español, Français</dd></div>
         </dl>
       </div>
