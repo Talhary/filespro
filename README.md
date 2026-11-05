@@ -1,3 +1,27 @@
+# FilesPro: dual-pane file manager for Windows
+
+**FilesPro** is a fast, keyboard-first file manager for Windows 10 and 11, built in Rust. It has two panes, tabs, instant search and an operation queue you can pause, resume and undo. It opens code, PDFs, documents, pictures and video in its own viewer tab, runs terminals side by side, tags files, finds duplicates, shows what fills your disk and syncs folders. No account, no ads, no telemetry.
+
+**Official site:** https://talhatechs.co.uk/products/filespro/
+
+**Download:** [Get FilesPro from the Microsoft Store](https://apps.microsoft.com/detail/9NTKTTNK7JXX)
+
+**Made by:** [TalhaTechs](https://talhatechs.co.uk/), who build fast, private Windows software in Rust. Also from TalhaTechs: Noyare, a system monitor for Windows, on the [Microsoft Store](https://apps.microsoft.com/detail/9PL83RF36NP4).
+
+## Guides
+
+Step-by-step guides for common Windows file tasks: [keyboard shortcuts](https://talhary.github.io/filespro/shortcuts.html), [how to batch rename files in Windows](https://talhary.github.io/filespro/batch-rename-files-windows.html), [how to compare two folders in Windows](https://talhary.github.io/filespro/compare-two-folders-windows.html) and [a File Explorer alternative](https://talhary.github.io/filespro/file-explorer-alternative.html).
+
+## Privacy
+
+FilesPro collects no telemetry. Read the [privacy policy](https://talhary.github.io/filespro/privacy.html).
+
+---
+
+## About this repository
+
+This repository holds the FilesPro website source, not the app's source code.
+
 # FilesPro website
 
 Static marketing site for FilesPro, served by GitHub Pages. No build step.
